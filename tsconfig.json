@@ -2,5 +2,11 @@
     "version": "3.9.5",
     "extends": "./config/base",
     "files": [
-    ]
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "webpack",
+    ],
 }

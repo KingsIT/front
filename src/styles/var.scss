@@ -1,5 +1,9 @@
 $red: red;
 
+body, html, div, p {
+    margin: 0;
+}
+
 @mixin ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;

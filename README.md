@@ -18,6 +18,7 @@
                     export = content
                 }
             ```
+    - ts-import-plugin, 按需加载引入antd 样式组件
 
 #### webpack 配置说明
     - 扩展名省略配置
@@ -34,4 +35,28 @@
             ],
             exclude: /node_modules/
         },
+    ```
+
+#### 配置别名
+    ```
+        // webpack.config.js
+        resolve: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            alias: {
+                '@components': path.join(__dirname, './../', 'src/components')
+            }
+        },
+
+        // tsconfig.json
+        {
+            "compilerOptions": {
+                ...
+                "baseUrl": "./src",  // 必须配置
+                "paths": {
+                    "@components/*": ["components/*"]
+                }
+            }
+        }
+
+        // 也可以使用 tsconfig-paths-webpack-plugin 进行配置
     ```
