@@ -1,6 +1,6 @@
 import {observable, action} from 'mobx';
 
-export default class GlobalStore {
+export class GlobalStore {
     @observable num: number = 0;
 
     @action increase = (num: number) => {
@@ -11,3 +11,5 @@ export default class GlobalStore {
         this.num = num - 1
     }
 }
+
+export default new GlobalStore();
