@@ -1,14 +1,26 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
-        "lib": [ "es6" ],
-        "target": "es5",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
+        "outDir": "build/lib",
+        "target": "es6",
+        "module": "ESNext",
+        "lib": ["esnext", "es6", "es5", "dom", "scripthost"],
+        "allowJs": true,
+        "jsx": "react",
         "sourceMap": true,
-        "noImplicitAny": true,
-        "declaration": true
+        "downlevelIteration": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "noEmit": false,
+        "isolatedModules": false
     }
 }
