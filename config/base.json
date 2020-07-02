@@ -3,7 +3,9 @@
         "baseUrl": ".",
         "paths": {
             "@components/*": ["./src/components/*"],
-            "@utils/*": ["./src/utils/*"]
+            "@utils/*": ["./src/utils/*"],
+            "@views/*": ["./src/container/views/*"],
+            "@shared/*": ["./src/container/shared/*"]
         }, 
         "outDir": "build/lib",
         "target": "es6",
@@ -15,7 +17,7 @@
         "downlevelIteration": true,
         "strict": true,
         "noImplicitAny": false,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "moduleResolution": "node",

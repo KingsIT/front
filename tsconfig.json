@@ -9,4 +9,7 @@
         "scripts",
         "webpack",
     ],
+    "include": [
+        "src",
+    ]
 }
