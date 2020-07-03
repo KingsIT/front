@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {observer, inject} from 'mobx-react'
 // import { ComponentExt } from '@utils/reactExt';
+import UserIcon from '@assets/user.svg';
 
 interface IProps {
     globalStore?: IGlobalStore.GlobalStore;
@@ -29,8 +30,8 @@ class Counter extends React.Component<IProps, IState> {
     render() {
         return (
             <React.Fragment>
-                {this.props.globalStore?.num}
-                <button onClick={this.increase}>+llll</button>
+                <UserIcon color="red" width={20} height={20} />{this.props.globalStore?.num}
+                <button onClick={this.increase}>sss+</button>
                 <button>-</button>
             </React.Fragment>
         )

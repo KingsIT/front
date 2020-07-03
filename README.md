@@ -21,6 +21,7 @@
     - ts-import-plugin, 按需加载引入antd 样式组件
     - @types/webpack-env 解决 属性 hot 在类型 NodeModule 上不存在的报错
     - cross-env, 设置 process.env.NODE_ENV 变量
+    - @svgr/webpack, 集成 svg
 
 #### webpack 配置说明
     - 扩展名省略配置
