@@ -33,6 +33,9 @@ class Counter extends React.Component<IProps, IState> {
                 <UserIcon color="red" width={20} height={20} />{this.props.globalStore?.num}
                 <button onClick={this.increase}>sss+</button>
                 <button>-</button>
+                <svg className="icon" aria-hidden="true">
+                    <use xlinkHref="#iconarrow-down"></use>
+                </svg>
             </React.Fragment>
         )
     }
