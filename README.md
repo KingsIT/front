@@ -23,6 +23,9 @@
     - cross-env, 设置 process.env.NODE_ENV 变量
     - @svgr/webpack, 集成 svg
     - mini-css-extract-plugin 分离css chunk
+    - react-loadable, react-router-dom 代码分割
+    - optimize-css-assets-webpack-plugin 压缩css
+    - uglifyjs-webpack-plugin 压缩 js
 
 #### webpack 配置说明
     - 扩展名省略配置
