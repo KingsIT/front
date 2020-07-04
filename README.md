@@ -22,6 +22,7 @@
     - @types/webpack-env 解决 属性 hot 在类型 NodeModule 上不存在的报错
     - cross-env, 设置 process.env.NODE_ENV 变量
     - @svgr/webpack, 集成 svg
+    - mini-css-extract-plugin 分离css chunk
 
 #### webpack 配置说明
     - 扩展名省略配置
