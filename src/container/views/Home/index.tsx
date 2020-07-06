@@ -1,7 +1,8 @@
 import React from 'react';
+import { a_io } from './actions'
 
 export default function Home() {
     return (
-        <div>Home555</div>
+        <div onClick={() => { a_io() }}>Home555</div>
     )
 }
