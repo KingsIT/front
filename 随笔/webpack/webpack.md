@@ -10,3 +10,9 @@
    - 没被使用过的 import 标记为 /* unused harmony export [FuncName] */，其中 [FuncName] 为 export 的方法名称
    - webpack tree shaking 只处理顶层内容，例如类和对象内部都不会再被分别处理
    - concatenateModule webpack 默认配置，将所有 js 打入到同一个闭包
+
+#### plugin
+  - compiler:
+    - 在 webpack 启动时，一次性创建，包含整个webpack的配置，在webpack中应用插件时，插件可以接受到 compiler。引用
+  - compilation
+    - 代表了一次资源的构建，每次检测到文件改动时就会生成新的 compilation 队像，该对象包含了当前资源的打包信息（模块资源、编译生成资源、变化的文件、以及被跟踪依赖）
