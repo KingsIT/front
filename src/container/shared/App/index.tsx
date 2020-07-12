@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Loadable from 'react-loadable'
 
 function loading() {
@@ -22,8 +22,8 @@ class App extends React.Component {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/page" component={Page} />
+                    <Route exact path="/index" component={Home} />
+                    <Route exact path="/index/page" component={Page} />
                 </Switch>
             </Router>
         )

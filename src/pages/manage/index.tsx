@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {configure} from 'mobx';
 import { Provider } from 'mobx-react';
 import { AppContainer } from 'react-hot-loader';
-import * as store from './store';
+import * as store from '../../store';
 import App from '@shared/App';
 
 /**

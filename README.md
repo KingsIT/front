@@ -26,6 +26,8 @@
     - react-loadable, react-router-dom 代码分割
     - optimize-css-assets-webpack-plugin 压缩css
     - uglifyjs-webpack-plugin 压缩 js
+    - file-loader 能够根据配置项复制使用到的资源（不局限于图片）到构建之后的文件夹，并且能够更改对应的链接
+    - url-loader 包含 file-loader 的全部功能，并且能够根据配置将符合配置的文件转换成 Base64 方式引入，将小体积的图片 Base64 引入项目可以减少 http 请求，也是一个前端常用的优化方式。
 
 #### webpack 配置说明
     - 扩展名省略配置
