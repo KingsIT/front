@@ -6,8 +6,8 @@ function loading() {
     return <div>loading...</div>
 }
 
-const Area = Loadable({
-    loader: () => import(/*WebpackChunkName:"area"*/ './components/area'),
+const FirstFloor = Loadable({
+    loader: () => import(/*WebpackChunkName:"area"*/ './containers/firstFloor'),
     loading: loading
 })
 
@@ -16,13 +16,19 @@ const Card = Loadable({
     loading: loading
 })
 
+const Page404 = Loadable({
+    loader: () => import(/*WebpackChunkName:"card"*/ './components/Page404'),
+    loading: loading
+})
+
 class App extends React.Component {
     render() {
         return (
             <Router>
                 <Switch>
-                    <Route exact path="/resume/home" component={Area} />
+                    <Route exact path="/resume/me" component={FirstFloor} />
                     <Route exact path="/resume/card" component={Card} />
+                    <Route path="*" component={Page404} />
                 </Switch>
             </Router>
         )
