@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Loadable from 'react-loadable'
 
 function loading() {
@@ -26,6 +26,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Switch>
+                    <Route path='/' exact render={() => <Redirect to="/resume/me" />} />
                     <Route exact path="/resume/me" component={FirstFloor} />
                     <Route exact path="/resume/card" component={Card} />
                     <Route path="*" component={Page404} />

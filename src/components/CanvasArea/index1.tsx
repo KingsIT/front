@@ -15,7 +15,7 @@ export default function CanvasArea() {
         let highterOrLowser = "";
         let lettersGuessed;
         let gameOver = false;
-        const canvasArea = document.querySelector('#canvasOne');
+        const canvasArea:HTMLCanvasElement = document.querySelector('#canvasOne');
         const context = canvasArea.getContext("2d");
         const formButton = document.querySelector('#createImage');
         const initGame = () => {
