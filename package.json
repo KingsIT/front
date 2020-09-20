@@ -27,6 +27,9 @@
   "homepage": "https://github.com/KingsIT/front#readme",
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@babel/parser": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/types": "^7.11.5",
     "@svgr/webpack": "^5.4.0",
     "@types/node": "^14.0.14",
     "@types/react": "16.9.41",
@@ -39,6 +42,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
     "css-loader": "^1.0.1",
+    "cus-piugin": "file:../cus-pulgin",
     "cz-conventional-changelog": "^3.2.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^1.1.0",
@@ -84,7 +88,10 @@
     }
   },
   "dependencies": {
+    "@babel/generator": "^7.11.6",
+    "@babel/traverse": "^7.11.5",
     "antd": "^4.4.0",
+    "babel-generator": "^6.26.1",
     "instascan": "^1.0.0",
     "loader-utils": "^2.0.0",
     "mobx": "^5.15.4",
@@ -96,8 +103,5 @@
     "react-router-dom": "^5.2.0",
     "showdown": "^1.9.1",
     "webpack-dev-server": "^3.11.0"
-  },
-  "sideEffects": [
-    "b_io"
-  ]
+  }
 }
