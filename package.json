@@ -100,6 +100,8 @@
     "react-loadable": "^5.5.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
+    "rsync": "^0.6.1",
+    "shelljs": "^0.8.4",
     "showdown": "^1.9.1",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0"

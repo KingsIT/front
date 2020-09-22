@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import WriteWithLine from '@/components/WriteWithLine';
-import Home from '@views/Home';
-import styles from './index.scss';
 
 export default function FirstFloor() {
     useEffect(() => {
@@ -24,8 +22,7 @@ export default function FirstFloor() {
     }, []);
     return (
         <>
-             <Home />
-           
+            <WriteWithLine words={["你好", "我爱你", "你能知道吗"]}/>
         </>
     )
 }
