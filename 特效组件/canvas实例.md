@@ -1,1 +1,0 @@
-https://www.html5tricks.com/demo/html5-canvas-pixel-image/index.html
