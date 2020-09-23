@@ -37,7 +37,7 @@ const path = require('path');
 
 // // 5. 部署环境
 const rsync = Rsync.build({
-    source: path.join(__dirname, '../', 'E:\\front\\dist\\*'),
+    source: path.resolve(__dirname, '../', 'dist/*'),
     destination: 'root@47.114.3.107:/root/front',
     flags: 'avz',
     shell: 'ssh'
