@@ -1,5 +1,5 @@
 /*
- * @Author: your name
+ * @Author: 钱晶晶
  * @Date: 2020-09-22 23:27:38
  * @LastEditTime: 2020-09-23 00:11:52
  * @LastEditors: Please set LastEditors
@@ -15,7 +15,20 @@
 const shell = require('shelljs');
 const Rsync = require('rsync');
 const path = require('path');
+const argv = require('yargs').argv;
 
+const [targetHostName] = argv._;
+
+console.log(argv, 'argv===');
+
+const host_map = {
+    'staging': 'root@47.114.3.107:/root/front'
+}
+
+if (!host_map[targetHostName]) {
+    shell.echo("目标主机不存在");
+    shell.exit({code: 1});
+}
 // 1. 通知 开始构建
 
 // 2. 安装依赖
@@ -44,7 +57,12 @@ const rsync = Rsync.build({
 })
 
 rsync.execute(function(err, code, cmd) {
-    console.log(err)
-    console.log(code)
-    console.log(cmd)
+    // console.log(err)
+    // console.log(code)
+    // console.log(cmd)
+    if (err) {
+        shell.echo(`error ocurred: ${err}`);
+        return
+    }
+    shell.echo("部署成功");
 })

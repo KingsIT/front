@@ -4,7 +4,6 @@
   "description": "just for display",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev --respawn --transpileOnly src/index.ts",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
     "style": "run-s style:**",
@@ -104,6 +103,7 @@
     "shelljs": "^0.8.4",
     "showdown": "^1.9.1",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "yargs": "^16.0.3"
   }
 }
