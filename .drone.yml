@@ -1,0 +1,10 @@
+---
+    kind: pipeline
+    type: docker
+    name: front
+    
+    steps:
+    - name: npm install
+      image: node:lts-alpine3.9
+      commands:
+      - npm i

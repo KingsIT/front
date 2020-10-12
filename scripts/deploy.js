@@ -19,7 +19,7 @@ const argv = require('yargs').argv;
 
 const [targetHostName] = argv._;
 
-console.log(argv, 'argv===');
+// console.log(argv, 'argv===');
 
 const host_map = {
     'staging': 'root@47.114.3.107:/root/front'
@@ -32,10 +32,10 @@ if (!host_map[targetHostName]) {
 // 1. 通知 开始构建
 
 // 2. 安装依赖
-// if (shell.exec("npm i").code !== 0) {
-//     shell.echo("error npm install error");
-//     shell.exit({code: 1})
-// }
+if (shell.exec("npm i").code !== 0) {
+    shell.echo("error npm install error");
+    shell.exit({code: 1})
+}
 
 // // 3. 测试
 // if (shell.exec("npm run test").code !== 0) {
@@ -66,3 +66,7 @@ rsync.execute(function(err, code, cmd) {
     }
     shell.echo("部署成功");
 })
+
+// 各个环境的 机器人 api 不同步骤进行调用通知
+
+// drone 进行前端发布 不用 jekens 部署
