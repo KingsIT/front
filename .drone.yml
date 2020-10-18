@@ -13,3 +13,15 @@
       image: node:lts-alpine3.9
       commands:
       - npm run build
+
+    - name: rsync
+      image: drillster/drone-rsync
+      environment:
+        RSYNC_KEY:
+          from_secret: rsync_key
+      settings:
+        hosts:
+          - 47.114.3.107:8000
+        source: ./dist
+        target: /root/front
+        secrets: [ rsync_key ]
