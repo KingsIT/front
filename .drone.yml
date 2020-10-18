@@ -7,7 +7,7 @@
     - name: npm install
       image: node:lts-alpine3.9
       commands:
-      - npm i
+      - npm i --registry=https://registry.npm.taobao.org/
 
     - name: npm build
       image: node:lts-alpine3.9
