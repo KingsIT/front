@@ -8,3 +8,8 @@
       image: node:lts-alpine3.9
       commands:
       - npm i
+
+    - name: npm build
+      image: node:lts-alpine3.9
+      commands:
+      - npm run build

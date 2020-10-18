@@ -43,10 +43,10 @@ if (shell.exec("npm i").code !== 0) {
 //     shell.exit({code: 1})
 // }
 // // 4. 构建项目
-// if (shell.exec("npm run build").code !== 0) {
-//     shell.echo("error npm run build error");
-//     shell.exit({code: 1})
-// }
+if (shell.exec("npm run build").code !== 0) {
+    shell.echo("error npm run build error");
+    shell.exit({code: 1})
+}
 
 // // 5. 部署环境
 const rsync = Rsync.build({
